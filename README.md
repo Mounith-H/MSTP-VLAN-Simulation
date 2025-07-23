@@ -1,6 +1,8 @@
 # MSTP VLAN Simulation
 
-![Network Graph](image/graph.png)
+<div align="center">
+  <img src="image/graph.png" alt="Network Graph" />
+</div>
 
 This project is a hands-on simulation of a computer network using VLANs (Virtual Local Area Networks) and MSTP (Multiple Spanning Tree Protocol). It is designed as a learning tool to help you understand advanced networking concepts through visualization and experimentation.
 
