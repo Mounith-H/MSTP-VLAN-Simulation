@@ -6,7 +6,7 @@
 
 This project is a hands-on simulation of a computer network using VLANs (Virtual Local Area Networks) and MSTP (Multiple Spanning Tree Protocol). It is designed as a learning tool to help you understand advanced networking concepts through visualization and experimentation.
 
-## Why This Project Exists
+##
 
 In modern networks, we often need to separate different groups of devices for security or organizational purposes. Imagine an office building where you want the Sales team's computers to be on a different network from the Engineering team's, even if they are physically connected to the same hardware. This is what **VLANs** are for—they create separate "virtual" networks on the same physical equipment.
 
