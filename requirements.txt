@@ -1,0 +1,6 @@
+flask==2.2.3
+requests==2.28.2
+networkx==3.1
+matplotlib==3.7.1
+PyQt5==5.15.9
+psutil==5.9.5
