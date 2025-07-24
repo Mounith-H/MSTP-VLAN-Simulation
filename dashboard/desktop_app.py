@@ -273,17 +273,15 @@ class VlanGraphWidget(QWidget):
     def draw_graph(self, statuses, graph_layouts, vlan_ids, anim_path, anim_hop):
         self.ax.clear()
         G = nx.Graph()
-
-        # --- START OF THE FIX ---
-        # Build the graph from the static node list to stabilize the layout.
-        # This ensures node positions do not change on refresh.
-        all_node_ids = [node_id for node_id, _ in NODES]
-        G.add_nodes_from(all_node_ids)
+        
+        node_ids = list(statuses.keys())
+        if not node_ids: return
+        
+        G.add_nodes_from(node_ids)
         G.add_edges_from([tuple(link.split(':')) for link in Link_connected])
         
-        # Calculate and store the layout only once.
         if 'pos' not in graph_layouts:
-            graph_layouts['pos'] = nx.spring_layout(G, seed=80, k=0.8, iterations=100)
+             graph_layouts['pos'] = nx.spring_layout(G, seed=42)
         pos = graph_layouts['pos']
 
         edge_colors = {}

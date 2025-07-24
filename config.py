@@ -14,12 +14,6 @@ Ip_address = {
     "A": "127.0.0.1",
     "B": "127.0.0.1", 
     "C": "127.0.0.1",
-    "D": "127.0.0.1",
-    "E": "127.0.0.1",
-    "F": "127.0.0.1",
-    "G": "127.0.0.1",
-    "H": "127.0.0.1",
-    "I": "127.0.0.1",
 }
 
 # Port numbers for all nodes
@@ -27,12 +21,6 @@ Port_Number = {
     "A": 5000,
     "B": 5001,
     "C": 5002,
-    "D": 5003,
-    "E": 5004,
-    "F": 5005,
-    "G": 5006,
-    "H": 5007,
-    "I": 5008,
 }
 
 # Links between nodes (format: "Node1:Node2")
@@ -41,23 +29,10 @@ Link_connected = [
     "A:B",
     "B:C", 
     "C:A",
-
-    "D:E",
-    "E:F",
-    "F:D",
-
-    "G:H",
-    "H:I",
-    "I:G",
-
-    "A:D",
-    "D:G",
-    "G:A",
 ]
 
 # VLAN IDs in the network
 VLANS = [10, 20]
-# VLANS = [20]
 
 # VLAN assignments to links.
 # We will make BOTH VLANs a full triangle to force MSTP to block a port on each.
@@ -66,29 +41,12 @@ Vlan10 = [
     "A:B",
     "B:C",
     "C:A",
-
-    "G:H",
-    "H:I",
-    "I:G",
-
-    "A:D",
-    "D:G",
-    "G:A",
-
 ]
 
 Vlan20 = [
-    "D:E",
-    "E:F",
-    "F:D",
-
-    "G:H",
-    "H:I",
-    "I:G",
-
-    "A:D",
-    "D:G",
-    "G:A",
+    "A:B",
+    "B:C",
+    "C:A",
 ]
 
 # --- END OF THE CONFIGURATION ---
